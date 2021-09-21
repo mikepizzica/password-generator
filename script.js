@@ -54,14 +54,66 @@ function writePassword() {
       for (var i = 0; i < passwordLength; i++) {
         console.log(result += LowercaseUppercase[Math.floor(Math.random() * LowercaseUppercase.length)]);
       }
+    } else if (includeLowercase === true && includeUppercase === false && includeNumeric === true && includeSpecial === false) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += LowercaseNumeric[Math.floor(Math.random() * LowercaseNumeric.length)]);
+      }
+    } else if (includeLowercase === true && includeUppercase === false && includeNumeric === false && includeSpecial === true) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += LowercaseSpecial[Math.floor(Math.random() * LowercaseSpecial.length)]);
+      }
+    } else if (includeLowercase === true && includeUppercase === true && includeNumeric === true && includeSpecial === false) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += LowercaseUppercaseNumeric[Math.floor(Math.random() * LowercaseUppercaseNumeric.length)]);
+      }
+    } else if (includeLowercase === true && includeUppercase === true && includeNumeric === false && includeSpecial === true) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += LowercaseUppercaseSpecial[Math.floor(Math.random() * LowercaseUppercaseSpecial.length)]);
+      }
+    } else if (includeLowercase === true && includeUppercase === false && includeNumeric === true && includeSpecial === true) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += LowercaseNumericSpecial[Math.floor(Math.random() * LowercaseNumericSpecial.length)]);
+      }
+    } else if (includeLowercase === true && includeUppercase === true && includeNumeric === true && includeSpecial === true) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += LowercaseUppercaseNumericSpecial[Math.floor(Math.random() * LowercaseUppercaseNumericSpecial.length)]);
+      }
+    } else if (includeLowercase === false && includeUppercase === true && includeNumeric === false && includeSpecial === false) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += Uppercase[Math.floor(Math.random() * Uppercase.length)]);
+      }
+    } else if (includeLowercase === false && includeUppercase === true && includeNumeric === true && includeSpecial === false) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += UppercaseNumeric[Math.floor(Math.random() * UppercaseNumeric.length)]);
+      }
+    } else if (includeLowercase === false && includeUppercase === true && includeNumeric === false && includeSpecial === true) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += UppercaseSpecial[Math.floor(Math.random() * UppercaseSpecial.length)]);
+      }
+    } else if (includeLowercase === false && includeUppercase === true && includeNumeric === true && includeSpecial === true) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += UppercaseNumericSpecial[Math.floor(Math.random() * UppercaseNumericSpecial.length)]);
+      }
+    } else if (includeLowercase === false && includeUppercase === false && includeNumeric === true && includeSpecial === false) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += Numeric[Math.floor(Math.random() * Numeric.length)]);
+      }
+    } else if (includeLowercase === false && includeUppercase === false && includeNumeric === true && includeSpecial === true) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += NumericSpecial[Math.floor(Math.random() * NumericSpecial.length)]);
+      }
+    } else if (includeLowercase === false && includeUppercase === false && includeNumeric === false && includeSpecial === true) {
+      for (var i = 0; i < passwordLength; i++) {
+        console.log(result += Special[Math.floor(Math.random() * Special.length)]);
+      }
     } else {
-      console.log("Something other than only lowercase OR lowercase and uppercase was selected")
+      alert("Enter valid criteria")
     }
   }
-  var password = generatePassword();
-  console.log(password)
+  generatePassword()
+  console.log(result)
   var passwordText = document.querySelector("#password");
-  passwordText.value = password;
+  passwordText.value = result;
 }
 
 // var lowercase = true/false??? 26 characters below
