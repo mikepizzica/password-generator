@@ -4,10 +4,10 @@
 
 // // Write password to the #password input
 // function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+  // var password = generatePassword();
+  // var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  // passwordText.value = password;
 
 // }
 
@@ -43,21 +43,25 @@ function writePassword() {
   console.log(includeNumeric);
   var includeSpecial = confirm("Include Special Characters?");
   console.log(includeSpecial);
+  var result = '';
 
   function generatePassword() {
     if (includeLowercase === true && includeUppercase === false && includeNumeric === false && includeSpecial === false) {
       for (var i = 0; i < passwordLength; i++) {
-        console.log(Lowercase[Math.floor(Math.random() * Lowercase.length)]);
+        console.log(result += Lowercase[Math.floor(Math.random() * Lowercase.length)]);
       }
     } else if (includeLowercase === true && includeUppercase === true && includeNumeric === false && includeSpecial === false) {
       for (var i = 0; i < passwordLength; i++) {
-        console.log(LowercaseUppercase[Math.floor(Math.random() * LowercaseUppercase.length)]);
+        console.log(result += LowercaseUppercase[Math.floor(Math.random() * LowercaseUppercase.length)]);
       }
     } else {
       console.log("Something other than only lowercase OR lowercase and uppercase was selected")
     }
   }
-  generatePassword()
+  var password = generatePassword();
+  console.log(password)
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
 }
 
 // var lowercase = true/false??? 26 characters below
