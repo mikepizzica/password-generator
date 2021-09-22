@@ -32,4 +32,4 @@ THEN the password is either displayed in an alert or written to the page
 https://mikepizzica.github.io/password-generator-project/
 
 ## Screenshot
-![Screenshot of Password Generator](assets\images\screenshot-password-generator.png)
+![Screenshot of Password Generator](./assets/images/screenshot-password-generator.png)
