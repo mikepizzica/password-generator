@@ -40,7 +40,12 @@ function writePassword() {
   var passwordLength = getLength();
 
   // prompts to get boolean t/f values for whether or not an array should be included
+  var randomCharacters = [];
+  if (confirm("Include Lowercase?"));
+    randomCharacters = randomCharacters.concat(Lowercase)
   var includeLowercase = confirm("Include Lowercase?");
+  if (confirm("Include Uppercase"));
+    randomCharacters = randomCharacters.concat(Uppercase)
   var includeUppercase = confirm("Include Uppercase?");
   var includeNumeric = confirm("Include Numeric?");
   var includeSpecial = confirm("Include Special Characters?");

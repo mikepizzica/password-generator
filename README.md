@@ -29,7 +29,7 @@ THEN the password is either displayed in an alert or written to the page
 ```
 
 ## Link
-https://mikepizzica.github.io/password-generator-project/
+https://mikepizzica.github.io/password-generator
 
 ## Screenshot
 ![Screenshot of Password Generator](./assets/images/screenshot-password-generator.png)
